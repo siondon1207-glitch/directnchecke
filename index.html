@@ -1,23 +1,630 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+  <!-- AI 및 검색엔진 최적화를 위한 JSON-LD 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "기아 EV5",
+        "image": "https://car.reliabledone.com/images/kia-ev5-main.jpg",
+        "description": "2026년형 기아 EV5 트림별 공식 가격, 정부 및 지자체 전기차 보조금 혜택, 실구매가 계산기 및 경쟁 모델 비교 완벽 가이드",
+        "brand": {
+          "@type": "Brand",
+          "name": "기아"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "KRW",
+          "lowPrice": "40920000",
+          "highPrice": "53400000",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "기아 EV5 공식 가격과 실구매가는 대략 얼마 정도인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2026년형 기아 EV5 스탠다드 트림의 시작 가격은 약 4,092만원이며, 가장 인기가 높은 롱레인지 에어 트림은 약 4,575만원으로 책정되어 있습니다. 정부 보조금과 지자체 지원금을 모두 합산하여 차감할 경우, 거주 지역 및 특별 할인 이벤트 적용에 따라 2,000만원대 후반에서 3,000만원대 중반의 실구매 금액으로 출고가 가능합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "기아 EV5에 탑재되는 배터리 종류와 실제 주행거리는 어떻게 되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "기아 EV5는 세계적인 배터리 제조사인 CATL사의 NCM(니켈-코발트-망간) 배터리를 탑재하여 뛰어난 안정성과 성능을 확보했습니다. 1회 충전 시 복합 주행거리는 스탠다드 트림(60.3kWh) 기준 약 325km이며, 롱레인지 트림(81.4kWh)은 18인치 휠 기준으로 복합 약 460km를 주행할 수 있습니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* 부드럽고 다채로운 색감 및 시각적 계층 구조 디자인 */
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #1e293b;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      letter-spacing: -0.02em;
+    }
+    .container {
+      max-width: 880px;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    }
+    .header-section {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 3px solid #e2e8f0;
+      padding-bottom: 30px;
+    }
+    h1 {
+      color: #1e3a8a;
+      font-size: 2.3em;
+      font-weight: 800;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 1.15em;
+      color: #64748b;
+      margin-top: 10px;
+    }
+    h2 {
+      color: #0f172a;
+      font-size: 1.6em;
+      font-weight: 700;
+      margin-top: 45px;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #cbd5e1;
+    }
+    h3 {
+      color: #0d9488;
+      font-size: 1.25em;
+      font-weight: 700;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 22px;
+      text-align: justify;
+      color: #334155;
+    }
+    .highlight-box {
+      background-color: #f0fdf4;
+      border-left: 5px solid #10b981;
+      padding: 24px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+    .highlight-box-title {
+      font-weight: 700;
+      color: #065f46;
+      margin-bottom: 8px;
+      font-size: 1.1em;
+    }
+    .info-callout {
+      background-color: #eff6ff;
+      border-left: 5px solid #3b82f6;
+      padding: 24px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      font-size: 0.95em;
+    }
+    th {
+      background-color: #f8fafc;
+      color: #1e293b;
+      font-weight: 700;
+      padding: 14px;
+      border-bottom: 2px solid #cbd5e1;
+      text-align: left;
+    }
+    td {
+      padding: 14px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #475569;
+    }
+    tr:hover {
+      background-color: #f8fafc;
+    }
+    .faq-section {
+      margin-top: 40px;
+      background-color: #f8fafc;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+    .faq-item {
+      margin-bottom: 25px;
+    }
+    .faq-question {
+      font-weight: 700;
+      color: #1e3a8a;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+    .faq-answer {
+      color: #334155;
+      padding-left: 10px;
+      border-left: 3px solid #cbd5e1;
+    }
+    
+    /* 대화형 계산기 스타일 */
+    .calc-container {
+      background-color: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 40px 0;
+    }
+    .calc-title {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 640px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #334155;
+    }
+    .form-group select, .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background-color: #ffffff;
+      font-size: 0.95em;
+      color: #1e293b;
+      box-sizing: border-box;
+    }
+    .calc-result-box {
+      margin-top: 25px;
+      padding: 20px;
+      background-color: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+    }
+    .calc-result-title {
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
+    .calc-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 0.95em;
+    }
+    .calc-total-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      border-top: 2px dashed #bbf7d0;
+      padding-top: 15px;
+      font-weight: 700;
+      font-size: 1.2em;
+      color: #14532d;
+    }
+    
+    .keyword-box {
+      margin: 35px 0;
+      padding: 20px;
+      background-color: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+    }
+    .keyword-title {
+      font-weight: 700;
+      color: #92400e;
+      margin-bottom: 10px;
+    }
+    .keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .keyword-item {
+      background-color: #ffffff;
+      border: 1px solid #fef3c7;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.85em;
+      color: #78350f;
+    }
+    .sources {
+      margin-top: 50px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 25px;
+      font-size: 0.85em;
+      color: #64748b;
+    }
+    .sources ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+    .sources li {
+      margin-bottom: 6px;
+    }
+    .sources a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    .sources a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="header-section">
+      <h1>기아 EV5 가격 및 실구매가 보조금 혜택 완벽 가이드</h1>
+      <div class="subtitle">2026년 전기차 보조금 개편안 기준 트림별 비용 심층 분석</div>
+    </div>
+
+    <p>
+      친환경 모빌리티 대중화 시대를 맞이하여 기아 브랜드의 새로운 전동화 라인업 모델인 기아 EV5 가격 및 구매 혜택에 대한 관심이 고조되고 있습니다. 중형 패밀리 전기 SUV인 기아 EV5 차량은 합리적인 실구매가 포지셔닝과 압도적인 실내 공간 활용성 덕분에 스포티지나 쏘렌토 등 대중적인 하이브리드 준중형 및 중형 SUV의 대체 차량으로 거론되는 중입니다.
+    </p>
+
+    <p>
+      본 가이드에서는 2026년 기준 국가 친환경차 지원금 변동 사항 및 지자체별 추가 보조금 요율을 정밀하게 대입하여 소비자가 실제로 대리점에서 출고하게 되는 평균 실구매 금액이 얼마인지 명확히 산출해 드립니다. 아울러 공식 판매 대리점 계약 팁, 장기렌트와 자동차리스의 차이점, 다이렉트 자동차보험 저렴한곳 설계 비법까지 종합적인 내용을 담아 실속 있는 신차 패키지 구매를 지원합니다.
+    </p>
+
+    <div class="info-callout">
+      <div class="highlight-box-title">기아 EV5 2026년 핵심 팩트 시트</div>
+      기아 EV5는 세계적 배터리 제조사인 CATL사의 삼원계 NCM 배터리를 기본으로 채택하여 기존 리튬인산철 배터리 대비 겨울철 주행 안정성을 끌어올렸으며, 1회 충전 시 복합 기준 최고 460km 수준의 실효 주행 거리를 제공합니다.
+    </div>
+
+    <h2>1. 기아 EV5 공식 트림 및 세부 가격 분석</h2>
+    <p>
+      2026년형 기아 EV5 모델 라인업은 소비자의 운전 패턴과 라이프스타일에 맞출 수 있도록 두 가지 배터리 구성과 총 네 가지의 세부 세그먼트 종류로 판매되고 있습니다. 기본형인 스탠다드 트림부터 고성능 구동 사양이 조합된 GT-라인 모델까지 고르게 배치되어 소비자의 예산 규모에 맞는 견적 조율이 자유로운 편입니다.
+    </p>
+
+    <h3>스탠다드 에어 트림</h3>
+    <p>
+      가장 엔트리 영역에 위치한 스탠다드 트림은 60.3kWh 용량의 고효율 배터리를 탑재하고 있습니다. 기본 공식 출고가는 개별소비세 환원율 및 세제 혜택 등이 종합 조정되어 약 4,092만원에서 4,155만원 선으로 책정되었습니다. 도심 위주의 단거리 출퇴근 목적을 가졌거나 주말 대형 마트 쇼핑 등 패밀리 보조 차량으로 가볍게 전기 SUV를 운행하려는 소유주분들께 추천해 드리는 고가성비 모델입니다.
+    </p>
+
+    <h3>롱레인지 에어 트림</h3>
+    <p>
+      소비자들이 네이버나 구글 등 포털 포럼에서 제일 많이 문의하고 상담을 신청하는 베스트셀러 모델입니다. 배터리 용량이 81.4kWh로 대폭 업그레이드되어 장거리 고속도로 정속 주행에도 부담이 없습니다. 기본 가격표 상에 명시된 에어 2WD 18인치 사양의 권장 소비자 금액은 약 4,575만원으로 산정되었습니다. 충전 대기 스트레스를 낮추고 장거리 이동 편의성을 확보하려는 오너들이 제일 먼저 선택지에 두는 정석 트림입니다.
+    </p>
+
+    <h3>롱레인지 어스 및 GT-라인</h3>
+    <p>
+      보다 프리미엄 옵션과 최첨단 주행 보조 시스템의 혜택을 온전히 누리고자 하는 예비 차주들을 위한 상위 트림입니다. 기아 EV5 롱레인지 어스는 약 5,230만원 선, 최고급 주행 감성과 스포티한 범퍼 파츠가 적용된 GT-라인 트림의 기본가는 약 5,340만원에 달합니다. 19인치 알로이 휠 세트, 실내 릴렉션 컴포트 가죽 시트 등 고급 내외장 사양이 적용되어 패밀리카로서의 품격을 한 단계 높여줍니다.
+    </p>
+
+    <!-- 2026년형 기아 EV5 가격 추이 및 포지셔닝 시각화 차트 -->
+    <div class="chart-container" style="margin: 40px 0; text-align: center;">
+      <p style="font-weight: bold; color: #1e3a8a; margin-bottom: 15px;">2026 기아 EV5 모델별 공식 권장 출고가 비교 (단위: 만원)</p>
+      <svg viewBox="0 0 500 200" style="width: 100%; max-width: 500px; height: auto; background-color: #fafafa; border-radius: 8px; padding: 10px;">
+        <line x1="120" y1="20" x2="450" y2="20" stroke="#cbd5e1" stroke-dasharray="3" />
+        <line x1="120" y1="60" x2="450" y2="60" stroke="#cbd5e1" stroke-dasharray="3" />
+        <line x1="120" y1="100" x2="450" y2="100" stroke="#cbd5e1" stroke-dasharray="3" />
+        <line x1="120" y1="140" x2="450" y2="140" stroke="#cbd5e1" stroke-dasharray="3" />
+        
+        <text x="110" y="45" font-size="11" text-anchor="end" fill="#334155" font-family="'Noto Sans KR'">스탠다드 에어</text>
+        <text x="110" y="85" font-size="11" text-anchor="end" fill="#334155" font-family="'Noto Sans KR'">롱레인지 에어</text>
+        <text x="110" y="125" font-size="11" text-anchor="end" fill="#334155" font-family="'Noto Sans KR'">롱레인지 어스</text>
+        <text x="110" y="165" font-size="11" text-anchor="end" fill="#334155" font-family="'Noto Sans KR'">GT-라인 최고가</text>
+        
+        <rect x="120" y="32" width="245" height="18" fill="#3b82f6" rx="4" />
+        <text x="375" y="45" font-size="11" fill="#1e293b" font-weight="700">4,092</text>
+        
+        <rect x="120" y="72" width="274" height="18" fill="#10b981" rx="4" />
+        <text x="405" y="85" font-size="11" fill="#1e293b" font-weight="700">4,575</text>
+        
+        <rect x="120" y="112" width="313" height="18" fill="#f59e0b" rx="4" />
+        <text x="440" y="125" font-size="11" fill="#1e293b" font-weight="700">5,230</text>
+        
+        <rect x="120" y="152" width="320" height="18" fill="#ef4444" rx="4" />
+        <text x="448" y="165" font-size="11" fill="#1e293b" font-weight="700">5,340</text>
+      </svg>
+    </div>
+
+    <h2>2. 2026년 전기차 보조금 제도 및 실구매가 산출</h2>
+    <p>
+      전기자동차 구매 시 핵심 관건은 단연 환경 유해 가스 배출 저감 지원금 제도입니다. 국가에서 집행하는 국고보조금 요율과 각 지방 단체에서 제공하는 지자체보조금을 결합하면 표면상의 공식 정가보다 몇백 만원에서 천만 원 이상 다운된 저렴한 비용으로 무사히 대차 등록을 끝마칠 수 있습니다.
+    </p>
+
+    <p>
+      2026년도 환경부 발표에 맞춰 산정된 기아 EV5 롱레인지 에어 2WD 모델의 예상 국고보조금은 최대 552만원 수준입니다. 거주하시는 지역에 따른 지역 지자체보조금은 서울시의 경우 최저 165만원선에서 시작하여 전남 혹은 경남 고보조금 지역의 경우 최대 1,043만원까지 다양하게 지급되고 있어 편차가 매우 큽니다.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>인기 선택 트림</th>
+          <th>기본 공장가</th>
+          <th>예상 국고 지원금</th>
+          <th>서울시 보조금 기준 실구매가</th>
+          <th>지방 최고 할인 기준 실구매가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>스탠다드 2WD</td>
+          <td>4,092만원</td>
+          <td>약 500만원</td>
+          <td>약 3,375만원</td>
+          <td>약 2,550만원 선</td>
+        </tr>
+        <tr>
+          <td>롱레인지 에어 2WD</td>
+          <td>4,575만원</td>
+          <td>약 552만원</td>
+          <td>약 3,858만원</td>
+          <td>약 2,980만원 선</td>
+        </tr>
+        <tr>
+          <td>롱레인지 어스 2WD</td>
+          <td>5,230만원</td>
+          <td>약 552만원</td>
+          <td>약 4,513만원</td>
+          <td>약 3,635만원 선</td>
+        </tr>
+        <tr>
+          <td>롱레인지 GT-라인</td>
+          <td>5,340만원</td>
+          <td>약 520만원</td>
+          <td>약 4,623만원</td>
+          <td>약 3,745만원 선</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      또한 생산 기간에 따른 특별 프로모션 재고 혜택이나 기존에 이용하시던 기아 유류 차량을 인증중고차 플랫폼에 넘기고 연계 할인을 받는 트레이드인 정책까지 빈틈없이 신청하신다면 이론상 받을 수 있는 제조사 연계 혜택 금액은 최대 340만원에 달합니다. 지자체 혜택과 제조사 특가 할인을 동시에 끌어모으면 테슬라의 주력 SUV 라인인 모델Y RWD와의 실질적인 체감 격차를 최대 1,000만원 가량 벌려놓을 수 있습니다.
+    </p>
+
+    <h2>3. 대화형 기아 EV5 실구매가 및 인수 비용 계산기</h2>
+    <p>
+      본인이 거주하는 지역과 원하는 사양에 알맞은 최적의 실인수 가액을 가늠해 볼 수 있는 간편 계산 시뮬레이터 프로그램입니다. 취등록세 면제 혜택 범위까지 자체 수식에 반영하여 대략적인 연간 세무 세제 부담 비용을 직관적으로 검증할 수 있습니다.
+    </p>
+
+    <div class="calc-container">
+      <div class="calc-title">기아 EV5 전용 실구매 모의 견적 계산기</div>
+      
+      <div class="calc-grid">
+        <div class="form-group">
+          <label for="trim-select">운행하실 세부 트림 종류</label>
+          <select id="trim-select" onchange="runEV5Calculator()">
+            <option value="40920000">스탠다드 에어 (정가 4,092만원)</option>
+            <option value="45750951">롱레인지 에어 (정가 4,575만원)</option>
+            <option value="52300000">롱레인지 어스 (정가 5,230만원)</option>
+            <option value="53400000">롱레인지 GT-라인 (정가 5,340만원)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="region-select">실제 차량 등록 거주 지역</label>
+          <select id="region-select" onchange="runEV5Calculator()">
+            <option value="7170000">서울특별시 (보조금 총합 약 717만원)</option>
+            <option value="7500000">부산광역시 (보조금 총합 약 750만원)</option>
+            <option value="8000000">경기도권 주요 지자체 (보조금 총합 약 800만원)</option>
+            <option value="8500000">강원특별자치도 (보조금 총합 약 850만원)</option>
+            <option value="9200000">전남 해안권 지자체 (보조금 총합 약 920만원)</option>
+            <option value="9000000">경남 남해안권 지자체 (보조금 총합 약 900만원)</option>
+            <option value="7800000">제주특별자치도 (보조금 총합 약 780만원)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="promo-select">기아 제조사 특별 조건 및 결합 할인</label>
+          <select id="promo-select" onchange="runEV5Calculator()">
+            <option value="0">일반 출고 계약 (할인 없음)</option>
+            <option value="1000000">기존 전기차 보유 회원 대상 (100만원 감면)</option>
+            <option value="1700000">세이브오토 + 현대카드 M 일시불 결합 (170만원 감면)</option>
+            <option value="2500000">장기 재고차 선점 및 특별 조건 일시불 (250만원 감면)</option>
+            <option value="3400000">제조사 최대 프로모션 패키지 적용 (340만원 감면)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="user-options">추가 선택 패키지 옵션 입력 (만원 단위)</label>
+          <input type="number" id="user-options" value="120" min="0" max="1500" step="10" oninput="runEV5Calculator()">
+        </div>
+      </div>
+
+      <div class="calc-result-box">
+        <div class="calc-result-title">2026 전기차 정책 반영 최종 견적 산출</div>
+        
+        <div class="calc-row">
+          <span>차량 기본 정가:</span>
+          <span id="out-base" style="font-weight: 600;">-</span>
+        </div>
+        <div class="calc-row">
+          <span>선택 추가 사양 옵션가:</span>
+          <span id="out-options" style="font-weight: 600;">-</span>
+        </div>
+        <div class="calc-row">
+          <span>기아 대리점 프로모션 혜택:</span>
+          <span id="out-promo" style="color: #ef4444; font-weight: 600;">-</span>
+        </div>
+        <div class="calc-row">
+          <span>정부 및 지자체 매칭 지원금:</span>
+          <span id="out-subsidy" style="color: #10b981; font-weight: 600;">-</span>
+        </div>
+        <div class="calc-row">
+          <span>예상 차량 출고가액 (세전):</span>
+          <span id="out-carprice" style="font-weight: 700; color: #1e3a8a;">-</span>
+        </div>
+        <div class="calc-row">
+          <span>취등록세 (전기차 세제 감면 140만원 자동 반영):</span>
+          <span id="out-tax" style="font-weight: 600;">-</span>
+        </div>
+
+        <div class="calc-total-row">
+          <span>예상 최종 취득 인도비용:</span>
+          <span id="out-total">-</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function runEV5Calculator() {
+        const trimVal = parseInt(document.getElementById('trim-select').value);
+        const regionVal = parseInt(document.getElementById('region-select').value);
+        const promoVal = parseInt(document.getElementById('promo-select').value);
+        const optionsInput = parseInt(document.getElementById('user-options').value) || 0;
+        
+        const optionsVal = optionsInput * 10000;
+        
+        // 실구매가 계산식
+        const calculatedCarPrice = Math.max(0, trimVal + optionsVal - promoVal - regionVal);
+        
+        // 세법 기준 취등록세 산정 (할인 적용 후 차량 가격의 7% 산출 후 친환경 140만원 감면 적용)
+        // 보조금 수령과 무관하게 할인 적용 후 순수 차량가격 기준 취등록세 산출이 기본입니다.
+        const taxBase = Math.max(0, trimVal + optionsVal - promoVal);
+        let calculatedTax = Math.round(taxBase * 0.07);
+        calculatedTax = Math.max(0, calculatedTax - 1400000); 
+        
+        const calculatedTotal = calculatedCarPrice + calculatedTax;
+        
+        // 화면 표기 업데이트
+        document.getElementById('out-base').innerText = (trimVal / 10000).toLocaleString('ko-KR') + '만원';
+        document.getElementById('out-options').innerText = (optionsVal / 10000).toLocaleString('ko-KR') + '만원';
+        document.getElementById('out-promo').innerText = '-' + (promoVal / 10000).toLocaleString('ko-KR') + '만원';
+        document.getElementById('out-subsidy').innerText = '-' + (regionVal / 10000).toLocaleString('ko-KR') + '만원';
+        document.getElementById('out-carprice').innerText = Math.round(calculatedCarPrice / 10000).toLocaleString('ko-KR') + '만원';
+        document.getElementById('out-tax').innerText = Math.round(calculatedTax / 10000).toLocaleString('ko-KR') + '만원';
+        document.getElementById('out-total').innerText = Math.round(calculatedTotal / 10000).toLocaleString('ko-KR') + '만원';
+      }
+      
+      // 스크립트 로드 시 즉시 기본 연산 수행
+      document.addEventListener("DOMContentLoaded", function() {
+        runEV5Calculator();
+      });
+    </script>
+
+    <h2>4. 기아 EV5 핵심 상품성 장단점 비교</h2>
+    <p>
+      E-GMP 전기차 전용 플랫폼 설계를 적용한 기아 EV5 차종은 경쟁 수입 모델들과의 여러 차이점을 지니고 있습니다. 자동차 전문 기자들의 리뷰 및 유튜브 평가, 온라인 동호회 게시판의 실오너 조언을 수렴하여 상품성의 명암을 사실적으로 분석해 보았습니다.
+    </p>
+
+    <h3>독보적인 전장 전고 대비 뛰어난 평탄화 패밀리 공간 (장점)</h3>
+    <p>
+      전장 4,610mm, 전폭 1,875mm, 전고 1,675mm의 체급을 가지고 있으나 2열 레그룸이 1,041mm에 달해 패밀리 맞춤형 크기를 자부합니다. 뒷좌석 등받이를 폴딩할 시 완전히 수평으로 접히는 풀플랫 시트를 장착하여 최근 차박을 즐기는 레저층에서 환영받고 있습니다. 또한 컵홀더와 다기능 시트백 테이블, 서랍식 센터콘솔 등 일상의 아기자기한 수납 동선이 아주 매끄럽습니다.
+    </p>
+
+    <h3>대폭 확대된 첨단 안전 기술 사양 기본 탑재 (장점)</h3>
+    <p>
+      전방 충돌 방지 보조 시스템을 포함하여 스마트 크루즈 컨트롤, 후측방 사각지대 주차 제어 기능이 대폭 보강되었습니다. 빌트인캠2 고화질 블랙박스 어플 연계 기술과 문 열림 시 사고를 사전 차단하는 주차 브레이크 제동 제어 기능까지 안전사양 구성이 탁월하여 패밀리카 패키지 본연의 안심 가치를 높였습니다.
+    </p>
+
+    <h3>충전 속도 한계 및 동절기 기온 영향에 대한 밸런스 요건 (단위 및 단점)</h3>
+    <p>
+      전압 아키텍처 특성상 기존 최상위 전용 전기차 라인인 EV6나 EV9이 채용한 800V 초고속 시스템 대신 대중화 목적의 400V 전력 인프라 충전 계통을 채택하고 있습니다. 이로 인해 초고속 완충 시설을 가더라도 배터리 잔량 10%에서 80% 구간까지 급속 충전 시 약 30분대 중반 정도의 물리적 시간이 소요됩니다. 비록 삼원계 NCM 계열로 추위를 보강했으나 겨울철 한파 기후 노출 시 배터리 가열 제어 효율에 따라 저온 실주행거리가 상온 대비 어느 정도 소폭 저하된다는 점은 사전에 숙지해두어야 합니다.
+    </p>
+
+    <h2>5. 리스, 장기렌트, 오토캐시백 지능형 금융 꿀팁</h2>
+    <p>
+      기아 EV5 가격에 부담을 느끼는 직장인이나 개인 사업주라면 신차를 바로 현금으로 매입하는 방법 대신에 법적 면세 및 감가 처리가 유용한 금융 상품들을 교차 추천해 드립니다. 
+    </p>
+    <p>
+      예를 들어 신차 장기렌트 상품은 보험 할증 이력이 전혀 적용되지 않는 장점을 갖추었으며, 다이렉트 차량 종합 보험료 부담을 아예 무시하고 고정 월 비용 형태로 매입 계산서를 수급할 수 있습니다. 반면 번호판을 일반 승용차처럼 달고 싶으신 품격주의 구매 희망자에게는 자동차 리스 종류를 추천해 드립니다. 
+    </p>
+    <p>
+      인터넷에서 일명 특가 좌표나 계약 성지로 불리는 일부 전문 알선 대리점들을 이용하시면 각종 신차 사은품 패키지 지원, 썬팅 유리막 시공 현금지원 및 백화점 상품권, 현금 사은품 기프티콘과 같은 소소한 사은품 혜택 챙기기도 어렵지 않게 노려볼 수 있습니다. 추가로 토스 앱이나 신용카드사 어플에 등록된 연말연시 오토캐시백 프로모션을 꼼꼼히 체크하여 일시불 납부 혜택을 극대화하시길 바랍니다.
+    </p>
+
+    <h2>6. 커뮤니티 실제 차주 및 예비 오너들의 생생한 후기 요약</h2>
+    <p>
+      실시간 여론이 활발히 반영되는 디시 전기차 갤러리나 국내 권위의 자동차 플랫폼인 보배드림 게시판, 그리고 펨코와 에펨코리아 내 자동차 포럼 등의 게시글 동향을 면밀히 종합해 보았습니다.
+    </p>
+    <p>
+      상당수의 내돈내산 가입 출고 차주들은 테슬라의 수입 모델과 줄기차게 저울질하다 결국 가성비가 높은 기아 EV5로 귀결했다는 피드백을 내놓고 있습니다. 특히 국내 지방의 광범위한 충전 네트워크 및 친화적인 한국형 애프터 서비스(AS) 인프라가 계약 도장을 찍는 데 제일 중대한 안심 요인으로 작용했다고 귀띪합니다. 
+    </p>
+    <p>
+      간혹 인스타그램이나 유튜브의 오너 브이로그 등에서 충전 인프라 연동 시 충전요금 요금제 가입 관련 제휴 제어가 어색하다는 비판도 보이나, 이 역시 OTA 원격 소프트웨어 주기적 자동 업데이트를 거치며 한층 직관적이고 쾌적하게 안착되었다는 평가가 우세합니다.
+    </p>
+
+    <div class="faq-section">
+      <div class="faq-item">
+        <div class="faq-question">질문: 기아 EV5 출고 대기 기간 및 예약 방법은 어떻게 되나요?</div>
+        <div class="faq-answer">
+          답변: 2026년 상반기 기준 전국 대리점 출고 평균 대기 기간은 약 2개월 내외로 집계됩니다. 기아 공식 사이트 및 오프라인 전시장 고객센터 유선 전화를 통한 계약 대기 신청이 첫 단추이며, 미리 등록 요건을 확인해 두는 편이 빠른 신규 인수에 유용합니다.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">질문: 기아 EV5의 장기적인 자차 보험 가입 비용 절약 방법은 무엇인가요?</div>
+        <div class="faq-answer">
+          답변: 첨단 ADAS 안전 장비 및 빌트인캠2 순정 블랙박스가 기본 장착된 차량이기 때문에, 다이렉트 자동차보험 신규 설계 가입 시 블랙박스 장착 할인 특약 및 주행거리 환급 할인 특약을 연계하면 보험료를 상당히 싼곳 위주로 합리적으로 조율해 가입할 수 있습니다.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">질문: CATL 배터리의 화재 및 혹한기 안정성은 보증되나요?</div>
+        <div class="faq-answer">
+          답변: 기아가 이번 도입한 고밀도 NCM 삼원계 배터리는 혹독한 품질 검증을 통과했으며 고전압 배터리 전용 보증 수명을 10년 16만km 수준까지 완벽하게 제공하므로 과도한 걱정 없이 신뢰하셔도 좋습니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="keyword-box">
+      <div class="keyword-title">기아 EV5 연관 주요 검색 테마 리스트</div>
+      <div class="keyword-list">
+        <span class="keyword-item">기아 EV5 가격</span>
+        <span class="keyword-item">EV5 스탠다드 가격</span>
+        <span class="keyword-item">EV5 롱레인지 에어</span>
+        <span class="keyword-item">EV5 실구매가 예상</span>
+        <span class="keyword-item">수입 전기차 비교추천</span>
+        <span class="keyword-item">패밀리 SUV 최저가 견적</span>
+        <span class="keyword-item">지자체 보조금 계산기</span>
+        <span class="keyword-item">신차 리스 장기렌트 혜택</span>
+        <span class="keyword-item">전기차 안전사양 비교</span>
+        <span class="keyword-item">EV5 출고 오너 내돈내산 후기</span>
+      </div>
+    </div>
+
+    <div class="sources">
+      <p>공식 배포처 및 신뢰성 확보 참조 안내 사이트:</p>
+      <ul>
+        <li><a href="https://directncheckf.koreahankang.com" target="_blank" rel="noopener">ReliableDone 친환경 자동차 최신 정책 및 통합 가격 정보 지원 센터</a></li>
+        <li><a href="https://namu.wiki/w/%EA%B8%B0%EC%95%84_EV5" target="_blank" rel="noopener">나무위키 기아 EV5 모델 개요 및 연혁</a></li>
+        <li><a href="https://www.kia.com" target="_blank" rel="noopener">기아 공식 홈페이지 정식 출고 차량 정보관</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  
